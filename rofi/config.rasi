@@ -1,0 +1,23 @@
+configuration {
+    modes: "drun,window,run";
+    font: "Monego 12";
+    combi-modes: [window,drun];
+    line-margin: 12;
+    display-ssh:    "";
+    display-run:    "";
+    display-drun:   "";
+    display-window: "";
+    display-combi:  "";
+    show-icons:     false;
+}
+
+@theme "~/.config/rofi/nord.rasi"
+
+listview {
+    lines: 7;
+    columns: 1;
+}
+
+window {
+    width: 38%;
+}

@@ -1,0 +1,63 @@
+set mouse=a  " enable mouse
+set encoding=utf-8
+set number
+set relativenumber
+"set rnu
+set noswapfile
+set scrolloff=5
+
+set autoindent
+set fileformat=unix
+filetype indent on      " load filetype-specific indent files
+
+" for tabulation
+set smartindent
+set tabstop=2
+set softtabstop=2
+set expandtab
+set shiftwidth=2
+
+inoremap jk <esc>
+
+call plug#begin('~/.vim/plugged')
+
+" color schemas
+Plug 'morhetz/gruvbox'  " colorscheme gruvbox
+Plug 'xiyaowong/nvim-transparent'
+Plug 'bling/vim-airline'
+
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'
+
+Plug 'scrooloose/nerdtree'
+
+call plug#end()
+
+" Leader bind to space
+let mapleader = ","
+
+colorscheme gruvbox
+if (has('termguicolors'))
+  set termguicolors
+endif
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_z = "\ue0a1:%l/%L Col:%c"
+
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+map bn :bn<cr>
+map bp :bp<cr>
+map bq :bdelete<cr>
+
+let g:transparent_enabled = v:true
+
+" Telescope bindings
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+
+" NerdTree bindings
+nnoremap <leader>nb :NERDTreeFocus<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>

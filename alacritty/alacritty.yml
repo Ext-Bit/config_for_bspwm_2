@@ -1,0 +1,31 @@
+window:
+  padding:
+    x: 10
+    y: 10
+  opacity: 0.78
+
+font:
+  offset:
+    y: 0
+    x: 0
+
+  normal:
+    family: Monego
+    style: Regular
+
+  bold:
+    family: Monego
+    style: Bold
+
+  italic:
+    family: Monego
+    style: Italic
+
+  bold_italic:
+    family: Monego
+    style: Bold Italic
+
+  size: 11
+
+scrolling:
+  history: 1500
